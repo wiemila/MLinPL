@@ -154,7 +154,7 @@ if preview_data:
     all_columns = df.columns.values.tolist()
     hide_columns = "streams"
     stream_threshold = st.slider(
-        "Sterams slider:", 
+        "Streams slider:", 
         0, 
         4_000_000_000, 
         1_000_000_000,
