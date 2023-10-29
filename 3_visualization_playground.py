@@ -55,7 +55,11 @@ st.header("Part 2: Layout plots", divider="violet")
 st.sidebar.scatter_chart(df, x="bpm", y="danceability_%", size="streams", color="mode")
 ############################################################################
 # Tabs: take plots into tabs. Show both notations.
-
+c1,c2 =st.tabs(2)
+with c1:
+    st.scatter_chart(df, x="bpm", y="danceability_%", size="streams", color="mode")
+with c2: 
+    st.scatter_chart(df, x="bpm", y="danceability_%", size="streams", color="mode")
 ############################################################################
 # Columns: take plots into columns. Show both notations.
 #how many columns () c1,c2 =st.columns(2)
