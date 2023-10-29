@@ -1,10 +1,10 @@
 import streamlit as st
-from utils import load_data
-from utils import prepare_data
-from utils import produce_confusion
-from utils import produce_roc 
-from utils import round_p
-from utils import train_model
+#from utils import load_data
+#from utils import prepare_data
+#from utils import produce_confusion
+#from utils import produce_roc 
+#from utils import round_p
+#from utils import train_model
 
 st.set_page_config(page_title="Spotify ML", layout="wide")
 st.title("Spotify: Predict in Spotify chart")
