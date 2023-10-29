@@ -148,7 +148,7 @@ df = pd.read_csv(raw_data, encoding='ISO-8859-1')
 # 2. Use a multiselect to hide selected columns
 # 3. Use a slider to select rows where streams > X 
 
-preview_data = st.toggle(preview_data)
+preview_data = st.toggle("preview_dataframe")
 
 if preview_data:
     all_columns = df.columns.values.tolist()
