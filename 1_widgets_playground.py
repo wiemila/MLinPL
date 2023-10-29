@@ -148,18 +148,12 @@ df = pd.read_csv(raw_data, encoding='ISO-8859-1')
 # 2. Use a multiselect to hide selected columns
 # 3. Use a slider to select rows where streams > X 
 
-preview_data = st.toggle("Preview Dataframe")
+preview_data = False
 
 if preview_data:
     all_columns = df.columns.values.tolist()
-    hide_columns = st.multiselect("Hide columns", all_columns)
-    stream_threshold = st.slider(
-        "Keep songs with number of streams over:", 
-        0, 
-        4_000_000_000, 
-        1_000_000_000,
-        1_000_000,
-    )
+    hide_columns = "streams"
+    stream_threshold = 1_000_000_000
     df = df.loc[
         df["streams"] > stream_threshold, 
         [col for col in all_columns if col not in hide_columns]
