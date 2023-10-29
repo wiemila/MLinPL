@@ -20,7 +20,10 @@ st.caption("You can only pick one")
 
 st.subheader("Dropdown / selectbox", divider="gray")
 st.caption("You can only pick one")
-
+selected_selectebox=st.selectbox)label=question,
+options+seasons,)
+st.write(
+    f"""My preferred season is **{selected_selectbox}**""")
 ############################################################################
 
 st.subheader("Multiselect", divider="gray")
