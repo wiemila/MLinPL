@@ -12,4 +12,4 @@ Lorem**ipsum**
 $a+a^2$
 Have a good coffee
 I am a deep learning expert 
-""", unsafe_allow_html+True)
+""", unsafe_allow_html=True)
