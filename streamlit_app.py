@@ -39,10 +39,17 @@ st.write (f"#My value is {v}")
 
 
 #lets try to make a clicker counter
+
+#use the session state
+if "counter" not in st.session_state:
+  st.session_state["counter"]=0
 counter =0
 increment_me=st.button("increment me:balloon:")
 if increment_me:
   counter +=1
   placeholder.write(f"#My counter {counter}")
+
+
+
 
 
