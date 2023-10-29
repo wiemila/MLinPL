@@ -21,6 +21,10 @@ I am a deep learning expert
 #Create a button
 #every time you interact the whole script reruns from top to bottom
 #st.help(st.button)
-clicked = st.button(label="Click me")
-st.write(clicked)
+#clicked = st.button(label="Click me")
+#st.write(clicked)
+clicked = st.button(label="send baloons")
+if clicked:
+  st.ballons()
+
 
