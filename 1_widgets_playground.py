@@ -18,84 +18,34 @@ st.caption("You can only pick one")
 
 season_selected = st.radio(label=question, options=seasons)
 st.write(f"Your favourite season is {season_selected}")
+
 ############################################################################
 
 st.subheader("Dropdown / selectbox", divider="gray")
 st.caption("You can only pick one")
-selected_selectebox=st.selectbox)label=question,
-options+seasons,)
-st.write(
-    f"""My preferred season is **{selected_selectbox}**""")
+
+season_selected_drop_down = st.selectbox(question, options=seasons)
+st.write(f"Your favourite season is {season_selected_drop_down}")
+
 ############################################################################
 
 st.subheader("Multiselect", divider="gray")
 st.caption("You can pick many")
 
-selected_multi=st.multiselect(
-    question,seasons
-)
-selected_multi
+season_selected_multi = st.multiselect(question, options=seasons)
+st.write(f"Your favourite seasons are: {season_selected_multi}")
+
 ############################################################################
 
 st.subheader("Checkbox", divider="gray")
 
-############################################################################
+# Create a dictionary of the labels and the current state
+options = {option: None for option in seasons}
 
-st.subheader("Toggle", divider="gray")
+# Loop through the dictionary to create the checkbox and write the current value
+for option, checkbox in options.items():
+    options[option] = st.checkbox(option)
 
-############################################################################
-
-st.subheader("Slider", divider="gray")
-
-############################################################################
-
-st.subheader("Select Slider", divider="gray")
-
-############################################################################
-
-st.subheader("Text Input", divider="gray")
-
-############################################################################
-
-st.subheader("Number Input", divider="gray")
-
-############################################################################
-
-st.subheader("Date Input", divider="gray")
-
-############################################################################
-
-st.stop() # Comment when you are ready to start this exercise
-
-st.header("Part 2: Putting it together", divider="violet")
-
-raw_data = st.file_uploader("Upload CSV file")
-
-if raw_data is None:
-    st.warning("Please upload a file")
-    st.stop()
-df = pd.read_csv(raw_data, encoding='ISO-8859-1')
-
-############################################################################
-# Make the following script Streamlit-interactive
-# 1. Show dataframe only when toggle is on
-# 2. Use a multiselect to hide selected columns
-# 3. Use a slider to select rows where streams > X 
-
-preview_data = False
-
-if preview_data:
-    all_columns = df.columns.values.tolist()
-    hide_columns = "streams"
-    stream_threshold = 1_000_000_000
-    df = df.loc[
-        df["streams"] > stream_threshold, 
-        [col for col in all_columns if col not in hide_columns]
-    ]
-    st.dataframe(df)
-    st.download_button(
-        label="Download data as CSV",
-        data= df.to_csv(),
-        file_name='edited_df.csv',
-        mime='text/csv',
-    )
+for option, checkbox in options.items():
+    if checkbox:
+        st.write(f"You like {option}")
