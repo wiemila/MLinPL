@@ -1,3 +1,4 @@
+pip install plotly==5.18.0
 import altair as alt
 #import pyplot as plt
 import pandas as pd
@@ -48,8 +49,16 @@ st.altair_chart(alt_scatter, use_container_width=True)
 # Plotly Express
 
 st.subheader("Plotly Express", divider="gray")
+px_scatter = px.scatter(
+    df,     
+    x="bpm",
+    y="danceability_%",
+    size="streams",
+    color="mode",
+)
+st.plotly_chart(px_scatter, use_container_width=True)
 
-############################################################################
+###########################################################################
 # Seaborn
 
 st.subheader("Seaborn", divider="gray")
