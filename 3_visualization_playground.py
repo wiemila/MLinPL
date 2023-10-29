@@ -58,4 +58,9 @@ st.sidebar.scatter_chart(df, x="bpm", y="danceability_%", size="streams", color=
 
 ############################################################################
 # Columns: take plots into columns. Show both notations.
+c1,c2 =st.columns(2)
 
+with c1:
+    st.scatter_chart(df, x="bpm", y="danceability_%", size="streams", color="mode")
+with c2: 
+    st.scatter_chart(df, x="bpm", y="danceability_%", size="streams", color="mode")
