@@ -17,6 +17,7 @@ Have a good coffee
 
 I am a deep learning expert 
 """, unsafe_allow_html=True)
+#allows to use html in the code
 
 #Create a button
 #every time you interact the whole script reruns from top to bottom
@@ -35,4 +36,13 @@ if clicked:
 v=st.slider("select a number",
            -100,1000,0,10)
 st.write (f"#My value is {v}")
+
+
+#lets try to make a clicker counter
+counter =0
+inscrement_me=st.button("increment me:balloon:")
+if increment_me:
+  counter +=1
+  placeholder.write("#My counter {counter}")
+
 
