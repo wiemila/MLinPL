@@ -43,6 +43,6 @@ counter =0
 increment_me=st.button("increment me:balloon:")
 if increment_me:
   counter +=1
-  placeholder.write("#My counter {counter}")
+  placeholder.write(f"#My counter {counter}")
 
 
