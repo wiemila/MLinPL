@@ -44,30 +44,7 @@ alt_scatter = alt.Chart(df).mark_circle().encode(
 ).interactive()
 st.altair_chart(alt_scatter, use_container_width=True)
 
-############################################################################
-# Plotly Express
 
-st.subheader("Plotly Express", divider="gray")
-px_scatter = px.scatter(
-    df,     
-    x="bpm",
-    y="danceability_%",
-    size="streams",
-    color="mode",
-)
-st.plotly_chart(px_scatter, use_container_width=True)
-
-###########################################################################
-# Seaborn
-
-st.subheader("Seaborn", divider="gray")
-
-############################################################################
-# Matplotlib
-
-st.subheader("Matplotlib", divider="gray")
-
-############################################################################
 
 st.header("Part 2: Layout plots", divider="violet")
 
