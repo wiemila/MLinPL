@@ -16,6 +16,8 @@ question = "What's your favourite season?"
 st.subheader("Radio", divider="gray")
 st.caption("You can only pick one")
 
+season_selected = st.radio(label=question, options=seasons)
+st.write(f"Your favourite season is {season_selected}")
 ############################################################################
 
 st.subheader("Dropdown / selectbox", divider="gray")
