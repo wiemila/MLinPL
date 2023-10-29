@@ -106,4 +106,13 @@ st.write(
 
 #st.write(f"You like {season_selected_drop_down} {slider_item.lower()}!")
 
-#####################################
+############################################################################
+
+st.subheader("Text Input", divider="gray")
+
+season = st.text_input(
+    "What's your favorite season :balloon:?"
+)
+st.write(season)
+
+#########################################
