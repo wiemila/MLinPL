@@ -75,7 +75,7 @@ st.header("Part 2: Layout plots", divider="violet")
 # Sidebar: put the file upload in the sidebar
 #if the plot is very big expander can be used
 
-with st.sidebar.scatter_chart(df, x="bpm", y="danceability_%", size="streams", color="mode")
+st.sidebar.scatter_chart(df, x="bpm", y="danceability_%", size="streams", color="mode")
 ############################################################################
 # Tabs: take plots into tabs. Show both notations.
 
