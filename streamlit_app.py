@@ -8,6 +8,7 @@ st.markdown("""
 Lorem**ipsum**
 
 -:balloon: Chemistry
+
 -:car: Data Science
 
 $a+a^2$
