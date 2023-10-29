@@ -25,6 +25,6 @@ I am a deep learning expert
 #st.write(clicked)
 clicked = st.button(label="send baloons")
 if clicked:
-  st.ballons()
+  st.balloons()
 
 
