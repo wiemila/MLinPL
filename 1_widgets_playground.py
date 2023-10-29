@@ -125,4 +125,12 @@ min_value=1,
 step=1,
 )
 
-#########################################
+############################################################################
+
+st.subheader("Date Input", divider="gray")
+
+user_date = st.date_input(label=f"When is your birthday?")
+
+st.write(f"My Birthday is {user_date}")
+
+#####################################################################
