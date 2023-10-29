@@ -1,7 +1,7 @@
 import altair as alt
-import pyplot as plt
+#import pyplot as plt
 import pandas as pd
-import plotly.express as px
+#import plotly.express as px
 import seaborn as sns
 import streamlit as st
 
