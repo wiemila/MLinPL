@@ -32,5 +32,7 @@ if clicked:
 
 #add a s;oder tjat [romts s;oder v;aie
 
-v=st.slider("select a number")
+v=st.slider("select a number"
+           -100,1000,0,10)
+st.write (f"#My value is {v}")
 
