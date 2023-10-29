@@ -29,6 +29,10 @@ st.write(
 st.subheader("Multiselect", divider="gray")
 st.caption("You can pick many")
 
+selected_multi=st.multiselect(
+    question,seasons
+)
+selected_multi
 ############################################################################
 
 st.subheader("Checkbox", divider="gray")
