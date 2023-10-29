@@ -157,7 +157,7 @@ if preview_data:
         "Keep songs with number of streams over:", 
         0, 
         4_000_000_000, 
-        1_000_000_000,
+        ( 1_000_000-1_000_000_000),
         1_000_000,
     )
     df = df.loc[
