@@ -23,7 +23,10 @@ I am a deep learning expert
 #st.help(st.button)
 #clicked = st.button(label="Click me")
 #st.write(clicked)
-clicked = st.button(label="send baloons")
+
+#add an action to a button
+#no call backs it runs the script from top to bottom
+clicked = st.button(label="Send baloons")
 if clicked:
   st.balloons()
 
