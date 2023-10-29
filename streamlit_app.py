@@ -18,5 +18,9 @@ Have a good coffee
 I am a deep learning expert 
 """, unsafe_allow_html=True)
 
+#Create a button
+#every time you interact the whole script reruns from top to bottom
 #st.help(st.button)
-st.button(label="Click me")
+clicked = st.button(label="Click me")
+st.write(clicked)
+
