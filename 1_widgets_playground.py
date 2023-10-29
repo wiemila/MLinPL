@@ -70,3 +70,21 @@ activated_multiproc =st.toggle(
     "do you want to activate multiprocessing?"
 )
 activated_multiproc
+
+############################################################################
+
+st.subheader("Slider", divider="gray")
+
+slider_value = st.slider(
+    f"As a %, How much do you love {season_selected}",
+    min_value=0,
+    max_value=100,
+    value=100,
+    step=5,
+    format="%d%%",
+    help="Pick something between 0 and 100",
+)
+
+st.write(f"You like {season_selected} {slider_value}%")
+
+############################################################################
