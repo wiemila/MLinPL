@@ -30,4 +30,7 @@ clicked = st.button(label="Send baloons")
 if clicked:
   st.balloons()
 
+#add a s;oder tjat [romts s;oder v;aie
+
+v=st.slider("select a number")
 
