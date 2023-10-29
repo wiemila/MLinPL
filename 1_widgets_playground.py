@@ -49,3 +49,20 @@ for option, checkbox in options.items():
 for option, checkbox in options.items():
     if checkbox:
         st.write(f"You like {option}")
+
+############################################################################
+
+st.subheader("Toggle", divider="gray")
+
+# Create a dictionary of the labels and the current state
+options = {option: None for option in seasons}
+
+# Loop through the dictionary to create the checkbox and write the current value
+for option, checkbox in options.items():
+    options[option] = st.toggle(option)
+
+for option, checkbox in options.items():
+    if checkbox:
+        st.write(f"You like {option}")
+
+#duplicate widget id if two widgets have the same name
