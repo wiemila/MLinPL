@@ -1,3 +1,5 @@
+## different pages will be different apps in streamlit i dont know how to do it in github
+
 import pandas as pd
 import streamlit as st
 
@@ -80,6 +82,7 @@ slider_value = st.slider(
     min_value=0,
     max_value=100,
     value=(20,30),
+    #if put like this in the () its a range slider, if just one value its the default value
     step=5,
     format="%d%%",
     help="Pick something between 0 and 100",
@@ -88,3 +91,19 @@ slider_value = st.slider(
 st.write(f"You like {season_selected} {slider_value}%")
 
 ############################################################################
+
+st.subheader("Select Slider", divider="gray")
+st.write(
+    st.select_slider(
+        "Question", ["Very low", "low", "medium", "high"]
+    )
+)
+
+#slider_item = st.select_slider(
+#    label=f"How much do you like {season_selected_drop_down}",
+#    options=["I don't", "A little", "A lot", "It's the Best!"],
+#)
+
+#st.write(f"You like {season_selected_drop_down} {slider_item.lower()}!")
+
+#####################################
