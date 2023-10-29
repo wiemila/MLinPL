@@ -1,3 +1,4 @@
+import streamlit as st
 from utils import load_data
 from utils import prepare_data
 from utils import produce_confusion
