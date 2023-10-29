@@ -32,9 +32,17 @@ st.scatter_chart(df, x="bpm", y="danceability_%", size="streams", color="mode")
 
 
 ############################################################################
+############################################################################
 # Altair
 
 st.subheader("Altair", divider="gray")
+alt_scatter = alt.Chart(df).mark_circle().encode(
+    x="bpm",
+    y="danceability_%",
+    size="streams",
+    color="mode:O",
+).interactive()
+st.altair_chart(alt_scatter, use_container_width=True)
 
 ############################################################################
 # Plotly Express
