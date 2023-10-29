@@ -58,11 +58,15 @@ st.subheader("Toggle", divider="gray")
 options = {option: None for option in seasons}
 
 # Loop through the dictionary to create the checkbox and write the current value
-for option, checkbox in options.items():
-    options[option] = st.toggle(option)
-
-for option, checkbox in options.items():
-    if checkbox:
-        st.write(f"You like {option}")
+#for option, checkbox in options.items():
+#    options[option] = st.toggle(option)
+#
+#for option, checkbox in options.items():
+#    if checkbox:
+#        st.write(f"You like {option}")
 
 #duplicate widget id if two widgets have the same name
+activated_multiproc =st.toggle(
+    "do you want to activate multiprocessing?"
+)
+activated_multiproc
