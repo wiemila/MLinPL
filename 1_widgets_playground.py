@@ -134,3 +134,40 @@ user_date = st.date_input(label=f"When is your birthday?")
 st.write(f"My Birthday is {user_date}")
 
 #####################################################################
+st.header("Part 2: Putting it together", divider="violet")
+
+raw_data = st.file_uploader("Upload CSV file")
+
+if raw_data is None:
+    st.warning("Please upload a file")
+    st.stop()
+df = pd.read_csv(raw_data, encoding='ISO-8859-1')
+
+############################################################################
+# 1. Show dataframe only when toggle is on
+# 2. Use a multiselect to hide selected columns
+# 3. Use a slider to select rows where streams > X 
+
+preview_data = st.toggle("Preview Dataframe")
+
+if preview_data:
+    all_columns = df.columns.values.tolist()
+    hide_columns = st.multiselect("Hide columns", all_columns)
+    stream_threshold = st.slider(
+        "Keep songs with number of streams over:", 
+        0, 
+        4_000_000_000, 
+        1_000_000_000,
+        1_000_000,
+    )
+    df = df.loc[
+        df["streams"] > stream_threshold, 
+        [col for col in all_columns if col not in hide_columns]
+    ]
+    st.dataframe(df)
+    st.download_button(
+        label="Download data as CSV",
+        data= df.to_csv(),
+        file_name='edited_df.csv',
+        mime='text/csv',
+    )
