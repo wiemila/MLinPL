@@ -40,7 +40,7 @@ st.write (f"#My value is {v}")
 
 #lets try to make a clicker counter
 counter =0
-inscrement_me=st.button("increment me:balloon:")
+increment_me=st.button("increment me:balloon:")
 if increment_me:
   counter +=1
   placeholder.write("#My counter {counter}")
