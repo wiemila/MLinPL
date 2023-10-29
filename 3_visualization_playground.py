@@ -28,6 +28,8 @@ st.header("Part 1: Visualize plots", divider="violet")
 # Streamlit native charts
 
 st.subheader("Streamlit native chart", divider="gray")
+st.scatter_chart(df, x="bpm", y="danceability_%", size="streams", color="mode")
+
 
 ############################################################################
 # Altair
