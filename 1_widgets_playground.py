@@ -119,7 +119,7 @@ st.write(season)
 
 st.subheader("Number Input", divider="gray")
 
-user_number (
+st.number_input(
    "number of components to keepi n PCA:",
 min_value=1,
 step=1,
