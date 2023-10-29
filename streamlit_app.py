@@ -48,7 +48,7 @@ increment_me=st.button("increment me:balloon:")
 if increment_me:
   st.session_state["counter"] +=1
   placeholder=st.empty()
-  placeholder.write(f"#My counter {st.session_state["counter"]}")
+  placeholder.write(f"#My counter {["counter"]}")
 
 
 
