@@ -17,4 +17,5 @@ Have a good coffee
 I am a deep learning expert 
 """, unsafe_allow_html=True)
 
-st.help(st.button)
+#st.help(st.button)
+st.button(label="Click me")
