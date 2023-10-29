@@ -1,4 +1,4 @@
-pip install plotly==5.18.0
+
 import altair as alt
 #import pyplot as plt
 import pandas as pd
@@ -74,7 +74,10 @@ st.header("Part 2: Layout plots", divider="violet")
 
 ############################################################################
 # Sidebar: put the file upload in the sidebar
+#if the plot is very big expander can be used
 
+with st.sidebar:
+    
 ############################################################################
 # Tabs: take plots into tabs. Show both notations.
 
