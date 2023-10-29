@@ -153,7 +153,13 @@ preview_data = st.toggle("preview_dataframe")
 if preview_data:
     all_columns = df.columns.values.tolist()
     hide_columns = "streams"
-    stream_threshold = 1_000_000_000
+    stream_threshold = st.slider(
+        "Keep songs with number of streams over:", 
+        0, 
+        4_000_000_000, 
+        1_000_000_000,
+        1_000_000,
+    )
     df = df.loc[
         df["streams"] > stream_threshold, 
         [col for col in all_columns if col not in hide_columns]
